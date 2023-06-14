@@ -1,0 +1,11 @@
+sentence_transformers 
+torch
+pickle
+math
+scipy
+collections
+rbo
+argparse
+numpy
+logging
+faiss
