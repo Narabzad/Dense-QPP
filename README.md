@@ -19,3 +19,29 @@ To replicate the QPP results on TREC DL-related query sets, you can follow the a
 - By passing any query file to ```q_file_name``` in ```Original_retrieval.py``` and ```Noisy_retrieval.py``` you may retrieve the results for other query sets;
 - Once you have the retrieved run  files for original queries as well as results for noise injected queries in any query set, you can measure the ranked bias overlap similarity between them using ```rankbiasoverlap.py``` by setting the ```original_run``` and ```noisy_run_file``` variable in ```rankbiasoverlap.py```.
 - Finally, you can measure correlation between predicted performance vs actual performance (reported in ```performance``` directory) by ```corr.py```
+
+## More results
+Due to space constraints, we were unable to include the Spearman's Rho results in the table presented in the paper. However, we would like to report the correlation results for Pearson's Rho, Kendall's Tau, and Spearman's Rho on the four datasets in relation to the experiment conducted for predicting both SBERT (Table 1) and ANCE (Table 2) dense retrievers.
+
+
+|              | MS MARCO |        |          |   2019  |        |          |   2020  |        |          |   Hard  |        |          |
+|--------------|:--------:|:------:|:--------:|:-------:|:------:|:--------:|:-------:|:------:|:--------:|:-------:|:------:|:--------:|
+|              | Pearson  | Kendal | Spearman | Pearson | Kendal | Spearman | Pearson | Kendal | Spearman | Pearson | Kendal | Spearman |
+| Clarity      |    0.065 |  0.053 |    0.073 |   0.217 |  0.111 |    0.151 |   0.196 |  0.137 |    0.188 |   0.232 |  0.110 |    0.162 |
+| QF           |    0.175 |  0.115 |    0.153 |   0.071 |  0.022 |    0.043 |   0.148 |  0.029 |    0.052 |   0.044 |  0.051 |    0.060 |
+| NQC          |    0.219 |  0.202 |    0.280 |   0.560 |  0.419 |    0.595 |   0.285 |  0.194 |    0.289 |   0.418 |  0.276 |    0.381 |
+| WIG          |    0.048 |  0.032 |    0.044 |   0.139 |  0.071 |    0.116 |   0.153 |  0.032 |    0.051 |   0.093 |  0.072 |    0.105 |
+| n(sigma_\%)  |    0.128 |  0.128 |    0.180 |   0.501 |  0.361 |    0.532 |   0.242 |  0.158 |    0.232 |   0.400 |  0.259 |    0.369 |
+| SMV          |    0.183 |  0.127 |    0.171 |   0.577 |  0.428 |    0.600 |   0.360 |  0.246 |    0.357 |   0.396 |  0.314 |    0.438 |
+| UEF          |    0.218 |  0.166 |    0.224 |   0.607 |  0.428 |    0.601 |   0.336 |  0.228 |    0.329 |   0.441 |  0.298 |    0.412 |
+| NeuralQPP    |    0.060 |  0.055 |    0.075 |   0.209 |  0.057 |    0.057 |   0.152 |  0.015 |    0.003 |   0.232 |  0.080 |    0.103 |
+| Pclarity_NQC |    0.213 |  0.136 |    0.193 |   0.428 |  0.314 |    0.451 |   0.084 |  0.202 |    0.292 |   0.088 |  0.053 |    0.083 |
+| NQAQPP       |    0.267 |  0.216 |    0.292 |   0.269 |  0.129 |    0.160 |   0.221 |  0.159 |    0.234 |   0.113 |  0.240 |    0.359 |
+| BERTQPP      |    0.292 |  0.223 |    0.301 |   0.334 |  0.143 |    0.194 |   0.378 |  0.273 |    0.411 |   0.435 |  0.181 |    0.256 |
+| qppBERT-PL   |    0.277 |  0.230 |    0.288 |   0.299 |  0.131 |    0.183 |   0.344 |  0.224 |    0.335 |   0.405 |  0.171 |    0.225 |
+| DeepQPP      |    0.021 |  0.017 |    0.024 |   0.139 |  0.103 |    0.106 |   0.262 |  0.197 |    0.291 |   0.096 |  0.049 |    0.065 |
+| QPP-PRP      |    0.010 |  0.014 |    0.275 |   0.203 |  0.204 |    0.281 |   0.181 |  0.143 |    0.219 |   0.181 |  0.099 |    0.144 |
+| DenseQPP     |    0.335 |  0.296 |    0.403 |   0.683 |  0.437 |    0.607 |   0.390 |  0.274 |    0.425 |   0.465 |  0.339 |    0.492 |
+
+
+ 
